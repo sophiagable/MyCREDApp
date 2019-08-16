@@ -6,6 +6,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { UsersComponent } from './users/users.component';
 
+import { routing } from './app.routing';
+
   // Your web app's Firebase configuration
   var config = {
     apiKey: "AIzaSyA2XMuthBqYb7qDwqusk_KF3BG0GDQ0u7M",
@@ -30,6 +32,7 @@ import { UsersComponent } from './users/users.component';
     BrowserModule,
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

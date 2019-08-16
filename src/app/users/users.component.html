@@ -1,8 +1,8 @@
 
 <div class="container p-2">
   <h5 class="my-3">Users List</h5>
-  <table class="table">
-    <thead>
+  <table class="table text-lg">
+    <thead  class="thead-dark">
       <tr>
         <th scope="col">User</th>
         <th scope="col">Email</th>
@@ -16,8 +16,8 @@
       <tr *ngFor="let user of users | async">
         <td>{{user.name}}</td>
         <td>{{user.email}}</td>
-        <td><i class="fa fa-pencil"></i></td>
-        <td> <i class="fa fa-trash-o"></i></td>
+        <td class="text-info"><i class="fa fa-pencil-square-o"></i></td>
+        <td class="text-info"><i class="fa fa-trash-o"></i></td>
       </tr>
     </tbody>
   </table>
