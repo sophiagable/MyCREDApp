@@ -1,29 +1,27 @@
 
+<div class="container p-2">
+  <h5 class="my-3">Users List</h5>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">User</th>
+        <th scope="col">Email</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- ngFor 技巧：必須加上 async 異步  -->
+      <tr *ngFor="let user of users | async">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td><i class="fa fa-pencil"></i></td>
+        <td> <i class="fa fa-trash-o"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="col">User</th>
-      <th scope="col">Email</th>
-      <th scope="col">Edit</th>
-      <th scope="col">Delete</th>
-    </tr>
-
-    <!-- ngFor 技巧：必須加上 async 異步  -->
-    <tr *ngFor="let user of users | async">
-      <td>{{user.name}}</td>
-      <td>{{user.email}}</td>
-      <td> <i class="fas fa-edit"></i></td>
-      <td> <i class="fas fa-trash-alt"></i> </td>
-    </tr>
-  </tbody>
-</table>
 
