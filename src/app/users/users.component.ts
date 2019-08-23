@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
-
+import { Router } from '@angular/router';
 interface User {
   name: string;
   email: string;
@@ -21,6 +21,10 @@ export class UsersComponent{
   ngOnInit() {
     this.usersCol = this.afs.collection('users');
     this.users = this.usersCol.valueChanges();
+   }
+
+   add() {
+     this._router.navigate(['add']);
    }
 
 }

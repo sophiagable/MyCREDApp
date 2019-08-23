@@ -7,6 +7,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { UsersComponent } from './users/users.component';
 
 import { routing } from './app.routing';
+import { UserFormComponent } from './user-form/user-form.component';
 
   // Your web app's Firebase configuration
   var config = {
@@ -26,7 +27,8 @@ import { routing } from './app.routing';
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
